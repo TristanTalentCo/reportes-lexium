@@ -21,9 +21,9 @@
             --color-border: rgba(0,0,0,0.2);
             --color-header-text: #fff;
             --color-title: #202040;
-            --color-table-head-bg: #b9b9b9;
+            --color-table-head-bg: #d5d5d5;
             --color-table-row-bg: #f5f5f5;
-            --color-table-row-end-bg: #d5d5d5;
+            --color-table-row-end-bg: #b9b9b9;
             --color-table-head-data-text: #000;
             --color-table-row-data-bg: #808080;
             --color-table-row-data-text: #fff;
@@ -116,7 +116,7 @@
         .hd-logo-lexium .lexium-logo {
             width: 125px;
             height: 30px;
-            /* Placeholder for SVG logo */
+           
             background: none;
         }
 
@@ -183,6 +183,7 @@
             gap: 0;
         }
         .r-h-title {
+            
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--color-header-text);
@@ -220,11 +221,16 @@
             font-size: 0.875rem;
             color: #000;
         }
+        .nt-border{
+            border: none;
+        }
         .r-h-nt-icon .nt-sq {
             width: 25px;
             height: 25px;
             border-radius: 4px;
         }
+
+        /* Estos son los colores para la columna del puntaje obtenido: Negro (bajo), Gris (medio), Blanco (alto), Amarillo (Fila del titulo del bloque), Azul (Fila del fin del reporte) */
         .dat-low{
             background-color: var(--color-dt-low);
             color: var(--lx-white);
@@ -245,19 +251,15 @@
             background-color: var(--color-dt-end);
             color: var(--lx-white);
         }
+        /* Aqui terminan los colores del puntaje obtenido*/
+
         .r-h-notas {
             display: flex;
             flex-direction: row;
             gap: 10px;
             flex: 1;
         }
-        /* The following selectors are not needed since inline styles are used in HTML,
-           but if you want to use classes instead, you can use these: */
-        /*
-        .r-h-nota .r-h-nt-icon .nt-sq:nth-child(1) { background: var(--color-dt-low); }
-        .r-h-nota .r-h-nt-icon .nt-sq:nth-child(2) { background: var(--color-dt-mid); }
-        .r-h-nota .r-h-nt-icon .nt-sq:nth-child(3) { background: var(--color-dt-high); border: 1px solid var(--color-dt-high-border); }
-        */
+        
         .report-content {
             display: flex;
             flex-direction: column;
@@ -274,9 +276,11 @@
             align-items: center;
             height: var(--rw-hgt);
             font-size: 1rem;
+            
         }
         .tb-head {
             font-weight: 500;
+            
             background: var(--color-table-head-bg);
             border: 1px solid var(--color-border);
         }
@@ -299,13 +303,20 @@
             border-right: 1px solid var(--color-border);
             overflow: hidden;
         }
+        .tb-reg-row-end{
+            overflow: hidden!important;
+            border-radius: 0 0 var(--bd-rd) var(--bd-rd);
+        }
+        .bd-top{
+            border-top: 1px solid rgba(0,0,0,0.2) ;
+        }
         .tb-col-a {
             flex: 1;
             display: flex;
             align-items: center;
             padding-left: 16px;
             border-right: 1px solid var(--color-border);
-            overflow: hidden;
+            line-height: .9rem;
         }
         .tb-col-b {
             width: calc(var(--dt-cnt-wd) + 16px);
@@ -322,6 +333,10 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
+        }
+        .tb-bullet{
+            font-size:.6rem; 
+            margin-right:8px;
         }
 
         .footer {
@@ -343,7 +358,7 @@
             :root {
                 --hd-logo-height: 70px;
                 --bd-rd: 8px;
-                --rw-hgt: 18px;
+                --rw-hgt: 16px;
             }
             .main {
                 width: 100vw !important;
@@ -372,15 +387,17 @@
             .hd-datos-alumno .al-dt-colegio { font-size: .8rem; }
             .hd-datos-alumno .al-dt-grupo,
             .hd-datos-alumno .al-dt-fecha { font-size: 0.65rem; }
+
             .r-h-info{
-                gap: -100px !important;
+                gap: 4px;
             }
             .r-h-title {
-                font-size: 1rem;
+                font-size: .9rem;
                 font-weight: 600;
+                height: 10px;
             }
             .r-h-date {
-                font-size: .8rem;
+                font-size: .7rem;
             }
             
             
@@ -400,6 +417,9 @@
                 height: 12px;
                 border-radius: 2px;
             }
+            .nt-border{
+                border: 1px solid black !important;
+            }
             .tb-head, .tb-row, .tb-row-end, .tb-col-a, .tb-col-b {
                 font-size: .75rem;
             }
@@ -407,6 +427,14 @@
                 width: 100%;
                 height: var(--rw-hgt);
                 border-radius: 0;
+            }
+            .tb-col-a {
+                padding-left: 4px;
+                overflow: hidden;
+            }
+            .tb-bullet{
+                font-size:.4rem; 
+                margin-right:4px;
             }
             .dat-high{
                 border: none;
@@ -440,8 +468,9 @@
         </div>
         <div class="section">
             <div class="report-gp-container">
+                <!--  INICIA COLUMNA  -->
                 <div class="rep-col">
-                    <!-- Inicia Reporte 1 -->
+                    <!-- Inicia INTELECTUALES -->
                     <div class="report-body">
                         <div class="report-header">
                             <div class="report-h-top">
@@ -469,7 +498,7 @@
                                         </div>
                                         <div class="r-h-nota">
                                             <div class="r-h-nt-txt">Alto 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high"></div></div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high nt-border"></div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -487,7 +516,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">CLASIFICACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -496,7 +525,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ORIENTACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -505,7 +534,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">PLANEACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -514,7 +543,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANALOGIAS SIMBÓLICAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -523,7 +552,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">PROGRESIÓN NUMÉRICA</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -532,7 +561,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">VOCABULARIO</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -541,7 +570,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">VOCABULARIO DE MATEMÁTICAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -550,7 +579,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANALOGÍAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -559,7 +588,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">SEGUIMIENTO DE INSTRUCCIONES</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -578,7 +607,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">VOCABULARIO</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -587,7 +616,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">VOCABULARIO DE MATEMÁTICAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -596,7 +625,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANALOGÍAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -605,7 +634,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">SEGUIMIENTO DE INSTRUCCIONES</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -624,7 +653,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">RAZONAMIENTO LÓGICO</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -643,7 +672,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">DISCRIMINACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -652,7 +681,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">JUICIO DE CONCEPTOS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -661,7 +690,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">CONCEPTUALIZACIÓN DE HECHOS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -670,7 +699,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">APLICACIÓN DE HECHOS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -689,7 +718,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ORIENTACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -698,7 +727,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">PLANEACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -717,7 +746,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">DISCRIMINACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -726,7 +755,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">CLASIFICACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -735,7 +764,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">VOCABULARIO</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -744,7 +773,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANALOGÍAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -753,7 +782,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">SEGUIMIENTO DE INSTRUCCIONES</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -772,7 +801,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">PROGRESIÓN NUMÉRICA</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -781,7 +810,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">APLICACIÓN DE HECHOS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -790,7 +819,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANÁLISIS DE HECHOS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -799,7 +828,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ORIENTACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -808,7 +837,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">PLANEACIÓN</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -817,7 +846,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">ANALOGÍAS SIMBÓLICAS</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -826,7 +855,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">RAZONAMIENTO LÓGICO</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -846,11 +875,470 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Termina Reporte 1 -->
+                    <!-- Termina INTELECTUALES -->
                 </div>
+                <!--  TERMINA COLUMNA  -->
+                <!--  INICIA COLUMNA  -->
                 <div class="rep-col">
-                    <!-- Inicia Reporte 1 -->
+                    <!-- Inicia EMOCIONALES -->
+                    <div class="report-body"> 
+                        <div class="report-header">
+                            <div class="report-h-top">
+                                <div class="r-h-logo">
+                                    <img src="img/icon-evcl.png" alt="">
+                                </div>
+                                <div class="r-h-info">
+                                    <div class="r-h-title" id="repNombre">HABILIDADES EMOCIONALES</div>
+                                    <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
+                                </div>
+                            </div>
+                            <div class="report-h-btm">
+                                <div class="r-h-acotaciones">
+                                    <div class="r-h-nota-t">
+                                        <div class="r-h-nt-txt">Anotaciones:</div>
+                                    </div>
+                                    <div class="r-h-notas">
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Bajo 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-low" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Medio 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-mid" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Alto 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high nt-border"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="table-body">
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">HABILIDADES INTRAPERSONALES</div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">AUTOESTIMA</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">MANEJO DE LA TENSIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">BIENESTAR FÍSICO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">HABILIDADES INTERPERSONALES</div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">ASERTIVIDAD</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">CONCIENCIA DE LOS DEMÁS</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">EMPATÍA</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">HABILIDADES PARA LA VIDA</div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">MOTIVACIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">COMPROMISO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">ADMINISTRACIÓN DEL TIEMPO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">TOMA DE DECISIONES</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">LIDERAZGO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">ESTILOS DE COMUNICACIÓN INTERPERSONAL</div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">AGRESIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">TIMIDEZ</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">PROPENSIÓN AL CAMBIO</div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">PROPENSIÓN AL CAMBIO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <div class="tb-row-end">
+                                    <div class="tb-col-a" id="tituloIndice">IIE</div>
+                                    <div class="tb-col-b">
+                                        <div class="tb-data-container dat-end" id="datoTotal">DT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Termina EMOCIONALES -->
+                    <!-- Inicia METACOGNICIÓN -->
                     <div class="report-body">
+                        <div class="report-header">
+                            <div class="report-h-top">
+                                <div class="r-h-logo">
+                                    <img src="img/icon-evcl.png" alt="">
+                                </div>
+                                <div class="r-h-info">
+                                    <div class="r-h-title" id="repNombre">METACOGNICIÓN </div>
+                                    <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
+                                </div>
+                            </div>
+                            <div class="report-h-btm">
+                                <div class="r-h-acotaciones">
+                                    <div class="r-h-nota-t">
+                                        <div class="r-h-nt-txt">Anotaciones:</div>
+                                    </div>
+                                    <div class="r-h-notas">
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Bajo 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-low" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Medio 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-mid" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Alto 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high nt-border"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="table-body">
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">PREFERENCIAS PERCEPTUALES</div>
+                                        <div class="tb-col-b">
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">LENGUAJE VISUALE</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">NUMÉRICO VISUAL</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">LENGUAJE AUDITIVO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">NUMÉRICO AUDITIVO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">KINESTÉSICO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">PREFERENCIAS DE INTERACCIÓN</div>
+                                        <div class="tb-col-b">
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">INDIVIDUAL</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">EN EQUIPO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-head">
+                                        <div class="tb-col-a" id="tituloBloque">PREFERENCIAS DE COMUNICACIÓN</div>
+                                        <div class="tb-col-b">
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">ORAL</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row tb-reg-row-end">
+                                        <div class="tb-col-a ">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">ESCRITO</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Termina METACOGNICIÓN -->
+                    <!-- Inicia HABITOS-->
+                    <div class="report-body">
+                        <div class="report-header">
+                            <div class="report-h-top">
+                                <div class="r-h-logo">
+                                    <img src="img/icon-evcl.png" alt="">
+                                </div>
+                                <div class="r-h-info">
+                                    <div class="r-h-title" id="repNombre">HÁBITOS</div>
+                                    <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
+                                </div>
+                            </div>
+                            <div class="report-h-btm">
+                                <div class="r-h-acotaciones">
+                                    <div class="r-h-nota-t">
+                                        <div class="r-h-nt-txt">Anotaciones:</div>
+                                    </div>
+                                    <div class="r-h-notas">
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Bajo 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-low" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Medio 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-mid" ></div></div>
+                                        </div>
+                                        <div class="r-h-nota">
+                                            <div class="r-h-nt-txt">Alto 000 - 888</div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high nt-border"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="table-body">
+                                <!-- inicia bloque -->
+                                <div class="tb-block">
+                                    <div class="tb-row bd-top">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">CONSISTENCIA</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">PERSISTENCIA</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">PRUDENCIA</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                    <div class="tb-row">
+                                        <div class="tb-col-a">
+                                            <span class="tb-bullet">&#9679;</span>
+                                            <div id="tituloMateria">COOPERACIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- termina bloque -->
+                                <div class="tb-row-end">
+                                    <div class="tb-col-a" id="tituloIndice">ÍNDICE GENERAL</div>
+                                    <div class="tb-col-b">
+                                        <div class="tb-data-container dat-end" id="datoTotal">DT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Termina HABITOS-->
+                    <!-- Inicia Template Reporte No Borrar -->
+                    <div class="report-body" style="display: none;">
                         <div class="report-header">
                             <div class="report-h-top">
                                 <div class="r-h-logo">
@@ -877,7 +1365,7 @@
                                         </div>
                                         <div class="r-h-nota">
                                             <div class="r-h-nt-txt">Alto 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high"></div></div>
+                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high nt-border"></div></div>
                                         </div>
                                     </div>
                                 </div>
@@ -895,7 +1383,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">Block Title</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -904,7 +1392,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">Block Title</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -913,7 +1401,7 @@
                                     </div>
                                     <div class="tb-row">
                                         <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
+                                            <span class="tb-bullet">&#9679;</span>
                                             <div id="tituloMateria">Block Title</div>
                                         </div>
                                         <div class="tb-col-b">
@@ -931,174 +1419,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Termina Reporte 1 -->
-                    <!-- Inicia Reporte 1 -->
-                    <div class="report-body">
-                        <div class="report-header">
-                            <div class="report-h-top">
-                                <div class="r-h-logo">
-                                    <img src="img/icon-evcl.png" alt="">
-                                </div>
-                                <div class="r-h-info">
-                                    <div class="r-h-title" id="repNombre">TÍTULO REPORTE</div>
-                                    <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
-                                </div>
-                            </div>
-                            <div class="report-h-btm">
-                                <div class="r-h-acotaciones">
-                                    <div class="r-h-nota-t">
-                                        <div class="r-h-nt-txt">Anotaciones:</div>
-                                    </div>
-                                    <div class="r-h-notas">
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Bajo 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-low" ></div></div>
-                                        </div>
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Medio 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-mid" ></div></div>
-                                        </div>
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Alto 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="report-content">
-                            <div class="table-body">
-                                <!-- inicia bloque -->
-                                <div class="tb-block">
-                                    <div class="tb-head">
-                                        <div class="tb-col-a" id="tituloBloque">TÍTULO BLOQUE</div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- termina bloque -->
-                                <div class="tb-row-end">
-                                    <div class="tb-col-a" id="tituloIndice">NOMBRE DE ÍNDICE</div>
-                                    <div class="tb-col-b">
-                                        <div class="tb-data-container dat-end" id="datoTotal">DT</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Termina Reporte 1 -->
-                    <!-- Inicia Reporte 1 -->
-                    <div class="report-body">
-                        <div class="report-header">
-                            <div class="report-h-top">
-                                <div class="r-h-logo">
-                                    <img src="img/icon-evcl.png" alt="">
-                                </div>
-                                <div class="r-h-info">
-                                    <div class="r-h-title" id="repNombre">TÍTULO REPORTE</div>
-                                    <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
-                                </div>
-                            </div>
-                            <div class="report-h-btm">
-                                <div class="r-h-acotaciones">
-                                    <div class="r-h-nota-t">
-                                        <div class="r-h-nt-txt">Anotaciones:</div>
-                                    </div>
-                                    <div class="r-h-notas">
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Bajo 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-low" ></div></div>
-                                        </div>
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Medio 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-mid" ></div></div>
-                                        </div>
-                                        <div class="r-h-nota">
-                                            <div class="r-h-nt-txt">Alto 000 - 888</div>
-                                            <div class="r-h-nt-icon"><div class="nt-sq dat-high"></div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="report-content">
-                            <div class="table-body">
-                                <!-- inicia bloque -->
-                                <div class="tb-block">
-                                    <div class="tb-head">
-                                        <div class="tb-col-a" id="tituloBloque">TÍTULO BLOQUE</div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-high" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-mid" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                    <div class="tb-row">
-                                        <div class="tb-col-a">
-                                            <i class="fa-solid fa-right-long"></i>
-                                            <div id="tituloMateria">Block Title</div>
-                                        </div>
-                                        <div class="tb-col-b">
-                                            <div class="tb-data-container dat-low" id="datoTotal">DT</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- termina bloque -->
-                                <div class="tb-row-end">
-                                    <div class="tb-col-a" id="tituloIndice">NOMBRE DE ÍNDICE</div>
-                                    <div class="tb-col-b">
-                                        <div class="tb-data-container dat-end" id="datoTotal">DT</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Termina Reporte 1 -->
+                    <!-- Termina Template Reporte No Borrar-->
                 </div>
+                <!--  TERMINA COLUMNA  -->
+                
 
 
             </div>
