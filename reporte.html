@@ -110,8 +110,9 @@
             margin-left: auto;
             height: var(--hd-logo-height);
             display: flex;
-            align-items: start;
-            justify-content: flex-end; 
+            flex-direction: column;
+            align-items: end;
+            justify-content: space-between; 
         }
         .hd-logo-lexium .lexium-logo {
             width: 125px;
@@ -119,7 +120,27 @@
            
             background: none;
         }
-
+        .hd-logo-lexium button{
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            background: var(--lx-dark-blue); 
+            color: #fff; 
+            border: none; 
+            border-radius: 4px; 
+            padding: 8px 16px; 
+            cursor: pointer; 
+            font-family: inherit; 
+            font-size: .8rem; 
+            transition: background 0.2s;
+        }
+        .hd-logo-lexium button:hover {
+            background: var(--lx-orange);
+            color: #fff;
+        }
+        .hd-logo-lexium button i {
+            color: #fff;
+        }
         .section {
             flex: 1;
             display: flex;
@@ -383,6 +404,9 @@
             .hd-logo-lexium .lexium-logo {
                 height: 20px;
             }
+            .hd-logo-lexium button{
+                display: none; 
+            }
             .hd-datos-alumno .al-dt-nombre { font-size: 1rem; font-weight: 700; }
             .hd-datos-alumno .al-dt-colegio { font-size: .8rem; }
             .hd-datos-alumno .al-dt-grupo,
@@ -464,6 +488,11 @@
                 <div class="lexium-logo">
                     <img src="img/lexium-logo 1.png" alt="Institución Logo">
                 </div>
+                <button onclick="window.print()">
+                    <i class="fa fa-print"></i>
+                    Imprimir
+                </button>
+                
             </div>
         </div>
         <div class="section">
