@@ -11,6 +11,7 @@
             --lx-light-blue: #0561f2;
             --lx-light-grey: #eee;
             --color-border: rgba(0,0,0,0.2);
+            --color-border-t: rgba(0,0,0,0);
             --color-header-text: #fff;
             --color-title: #202040;
             --color-table-head-bg: #d5d5d5;
@@ -40,6 +41,10 @@
             min-height: 100vh;
             margin: 0;
             font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+        }
+        button{
+            margin: 0;
+            padding: 0;
         }
         .main {
             width: 1200px;
@@ -133,6 +138,23 @@
         .hd-logo-lexium button i {
             color: #fff;
         }
+        .al-dt-grupo{
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+        .dt-caps {
+            background: var( --color-table-head-bg);
+            color: var(--color-title);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .section {
             flex: 1;
             display: flex;
@@ -150,7 +172,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: var(--rw-hgt);
+            gap: calc(var(--rw-hgt) - 3px);
         }
         .report-body {
             background: none;
@@ -167,9 +189,13 @@
             overflow: hidden;
         }
         .report-h-top {
+            width: 100%;
+            padding-left: 16px;
+            padding-right: 8px;
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
             height: calc(2 * var(--rw-hgt) + 2px);
             gap: 12px;
             
@@ -211,6 +237,7 @@
             
             border-left: 1px solid var(--color-border);
             border-right: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -311,9 +338,9 @@
             font-weight: 500;
             background: var(--color-table-row-end-bg);
             border-radius: 0 0 var(--bd-rd) var(--bd-rd);
-            border-bottom: 1px solid var(--color-border);
-            border-left: 1px solid var(--color-border);
-            border-right: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border-t);
+            border-left: 1px solid var(--color-border-t);
+            border-right: 1px solid var(--color-border-t);
             overflow: hidden;
         }
         .tb-reg-row-end{
@@ -327,13 +354,13 @@
             flex: 1;
             display: flex;
             align-items: center;
-            padding-left: 16px;
-            border-right: 1px solid var(--color-border);
+            padding-left: 8px;
+            gap: 12px;
             line-height: .9rem;
         }
         .tb-col-b {
             width: calc(var(--dt-cnt-wd) + 16px);
-            
+            border-left: 1px solid var(--color-border);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -363,6 +390,98 @@
             color: var(--color-footer-text);
             font-size: 1rem;
         }
+        /* ESTILOS ACORDEON */
+                    .accordion {
+                        
+                        border-radius:var(--bd-rd);
+                        background: #f7f7f7;
+                        padding: 0;
+                        overflow: hidden;
+                        
+                    }
+                    .accordion-item {
+                        border-bottom: 1px solid #e0e0e0;
+                    }
+                    .accordion-header,
+                    .accordion-child-header {
+                        width: 100%;
+                        text-align: left;
+                        background: none;
+                        border-top: none;
+                        
+                        border-bottom: 1px solid var( --color-border);
+                        outline: none;
+                        font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+                        
+                        display: flex;
+                        align-items: center;
+                        
+                        cursor: pointer;
+                        
+                        transition: background 0.2s;
+                        
+                    }
+                    .accordion-header{
+                        background-color: var(--lx-dark-blue);
+                        color: var(--lx-white);
+                        height: calc(2 * var(--rw-hgt) + 2px);
+                        border-left: none;
+                        border-right: none;
+                        padding-left: 8px;
+                        font-size: 1rem;
+                    }
+                    .accordion-header:hover {
+                        background-color: var(--lx-light-blue);
+                    }
+                    .accordion-child-header{
+                        font-weight: 500;
+                        font-size: 1rem;
+                        background-color: var(--color-table-head-bg);
+                        height: var(--rw-hgt);
+                        justify-content: space-between;
+                        border-left: 1px solid var(--color-border);
+                        border-right: 1px solid var(--color-border);
+                    }
+                    .accordion-child-header:hover {
+                        
+                    }
+                    .accordion-header .fa,
+                    .accordion-child-header .fa {
+                        margin-left: 0;
+                        transition: transform 0.2s;
+                    }
+                    .accordion-header[aria-expanded="true"] .fa,
+                    .accordion-child-header[aria-expanded="true"] .fa {
+                        transform: rotate(180deg);
+                    }
+                    .accordion-body {
+                       
+                        display: none;
+                        
+                    }
+                    .accordion-body.open {
+                        display: block;
+                    }
+                    .accordion-child {
+                        
+                        background-color: var(--color-table-row-bg) ;
+                        
+                    }
+                    .accordion-child-body {
+                        
+                        display: none;
+                        
+                    }
+                    .accordion-child-body.open {
+                        display: block;
+                    }
+                    .accordion-body p, 
+                    .accordion-child-content p{
+                        padding: 0;
+                        margin: 0;
+                    }
+
+        /* Estilos para impresión */
         @media print {
             * {
                 -webkit-print-color-adjust: exact !important;
@@ -371,7 +490,7 @@
             :root {
                 --hd-logo-height: 70px;
                 --bd-rd: 8px;
-                --rw-hgt: 16px;
+                --rw-hgt: 14px;
             }
             .main {
                 width: 100vw !important;
@@ -403,12 +522,15 @@
             .hd-datos-alumno .al-dt-colegio { font-size: .8rem; }
             .hd-datos-alumno .al-dt-grupo,
             .hd-datos-alumno .al-dt-fecha { font-size: 0.65rem; }
-
+            .report-h-top{
+                flex-direction: row-reverse;
+                padding-left: 0;
+            }
             .r-h-info{
                 gap: 4px;
             }
             .r-h-title {
-                font-size: .9rem;
+                font-size: .8rem;
                 font-weight: 600;
                 height: 10px;
             }
@@ -429,15 +551,15 @@
                 font-size: 0.65rem;
             }
             .r-h-nt-icon .nt-sq {
-                width: 12px;
-                height: 12px;
+                width: 10px;
+                height: 10px;
                 border-radius: 2px;
             }
             .nt-border{
                 border: 1px solid black !important;
             }
             .tb-head, .tb-row, .tb-row-end, .tb-col-a, .tb-col-b {
-                font-size: .75rem;
+                font-size: .65rem;
             }
             .tb-data-container {
                 width: 100%;
@@ -447,6 +569,10 @@
             .tb-col-a {
                 padding-left: 4px;
                 overflow: hidden;
+            }
+            
+            .fa{
+                display: none;
             }
             .tb-bullet{
                 font-size:.4rem; 
