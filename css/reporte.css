@@ -494,7 +494,7 @@
             :root {
                 --hd-logo-height: 70px;
                 --bd-rd: 8px;
-                --rw-hgt: 13px;
+                --rw-hgt: 16px;
             }
             .main {
                 width: 100vw !important;
@@ -593,6 +593,10 @@
                 page-break-inside: avoid;
             }
             .footer {
-                display: none !important;
+                height: var(--rw-hgt);
+                
+            }
+            .footer-text{
+                font-size: .5rem;
             }
         }
