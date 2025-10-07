@@ -28,6 +28,20 @@
             --color-dt-end: var(--lx-light-blue);
             --color-dt-high-border: #090909;
             --color-footer-text: #202040;
+             /* Variables de color para los bordes de los chips */
+            --chip-green: #4caf50;  /* rgb(0.298, 0.686, 0.314) */
+            --chip-olive: #808000;  /* rgb(0.502, 0.502, 0) */
+            --chip-gold:  #ffd700;  /* rgb(1, 0.843, 0) */
+            --chip-admin: #607d8b;       /* rgb(0.376, 0.490, 0.545) */
+            --chip-ingenieria: #003366;  /* rgb(0, 0.2, 0.4) */
+            --chip-ti: #00bfff;          /* rgb(0, 0.749, 1) */
+            --chip-sociales: #e2715b;     /* rgb(0.886, 0.447, 0.357) */
+            --chip-humanidades: #800020;  /* rgb(0.502, 0, 0.125) */
+            --chip-lenguas: #ffa500;      /* rgb(1, 0.647, 0) */
+            --chip-artes: #800080;        /* rgb(0.502, 0, 0.502) */
+            --chip-creativos: #ff00ff;    /* rgb(1, 0, 1) */
+            --chip-ambiente: #a3522d;     /* rgb(0.627, 0.322, 0.176) */
+            --chip-text-color: #808080;   
         }
 
         html, body {
@@ -395,95 +409,415 @@
             font-size: 1rem;
         }
         /* ESTILOS ACORDEON */
-                    .accordion {
-                        
-                        border-radius:var(--bd-rd);
-                        background: #f7f7f7;
-                        padding: 0;
-                        overflow: hidden;
-                        
-                    }
-                    .accordion-item {
-                        border-bottom: 1px solid #e0e0e0;
-                    }
-                    .accordion-header,
-                    .accordion-child-header {
-                        width: 100%;
-                        text-align: left;
-                        background: none;
-                        border-top: none;
-                        
-                        border-bottom: 1px solid var( --color-border);
-                        outline: none;
-                        font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-                        
-                        display: flex;
-                        align-items: center;
-                        
-                        cursor: pointer;
-                        
-                        transition: background 0.2s;
-                        
-                    }
-                    .accordion-header{
-                        background-color: var(--lx-dark-blue);
-                        color: var(--lx-white);
-                        height: calc(2 * var(--rw-hgt) + 2px);
-                        border-left: none;
-                        border-right: none;
-                        padding-left: 8px;
-                        font-size: 1rem;
-                    }
-                    .accordion-header:hover {
-                        background-color: var(--lx-light-blue);
-                    }
-                    .accordion-child-header{
-                        font-weight: 500;
-                        font-size: 1rem;
-                        background-color: var(--color-table-head-bg);
-                        height: var(--rw-hgt);
-                        justify-content: space-between;
-                        border-left: 1px solid var(--color-border);
-                        border-right: 1px solid var(--color-border);
-                    }
-                    .accordion-child-header:hover {
-                        
-                    }
-                    .accordion-header .fa,
-                    .accordion-child-header .fa {
-                        margin-left: 0;
-                        transition: transform 0.2s;
-                    }
-                    .accordion-header[aria-expanded="true"] .fa,
-                    .accordion-child-header[aria-expanded="true"] .fa {
-                        transform: rotate(180deg);
-                    }
-                    .accordion-body {
-                       
-                        display: none;
-                        
-                    }
-                    .accordion-body.open {
-                        display: block;
-                    }
-                    .accordion-child {
-                        
-                        background-color: var(--color-table-row-bg) ;
-                        
-                    }
-                    .accordion-child-body {
-                        
-                        display: none;
-                        
-                    }
-                    .accordion-child-body.open {
-                        display: block;
-                    }
-                    .accordion-body p, 
-                    .accordion-child-content p{
-                        padding: 0;
-                        margin: 0;
-                    }
+        .accordion {
+            
+            border-radius:var(--bd-rd);
+            background: #f7f7f7;
+            padding: 0;
+            overflow: hidden;
+            
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .accordion-header,
+        .accordion-child-header {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border-top: none;
+            
+            border-bottom: 1px solid var( --color-border);
+            outline: none;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            
+            display: flex;
+            align-items: center;
+            
+            cursor: pointer;
+            
+            transition: background 0.2s;
+            
+        }
+        .accordion-header{
+            background-color: var(--lx-dark-blue);
+            color: var(--lx-white);
+            height: calc(2 * var(--rw-hgt) + 2px);
+            border-left: none;
+            border-right: none;
+            padding-left: 8px;
+            font-size: 1rem;
+        }
+        .accordion-header:hover {
+            background-color: var(--lx-light-blue);
+        }
+        .accordion-child-header{
+            font-weight: 500;
+            font-size: 1rem;
+            background-color: var(--color-table-head-bg);
+            height: var(--rw-hgt);
+            justify-content: space-between;
+            border-left: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+        }
+        .accordion-child-header:hover {
+            
+        }
+        .accordion-header .fa,
+        .accordion-child-header .fa {
+            margin-left: 0;
+            transition: transform 0.2s;
+        }
+        .accordion-header[aria-expanded="true"] .fa,
+        .accordion-child-header[aria-expanded="true"] .fa {
+            transform: rotate(180deg);
+        }
+        .accordion-body {
+            
+            display: none;
+            
+        }
+        .accordion-body.open {
+            display: block;
+        }
+        .accordion-child {
+            
+            background-color: var(--color-table-row-bg) ;
+            
+        }
+        .accordion-child-body {
+            
+            display: none;
+            
+        }
+        .accordion-child-body.open {
+            display: block;
+        }
+        .accordion-body p, 
+        .accordion-child-content p{
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+                    /*ESTILOS REPORTE VOCACIONAL*/
+                    /*ESTILOS REPORTE ORIENTACION VOCACIONAL*/
+
+        .tb-row-head {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            width: 1168px;
+            height: 36px;
+            background-color: #f5f5f5; /* rgb(0.9615, 0.9615, 0.9615) */
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .tb-col-c {
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            height: 36px;
+        }
+
+        .tb-col-d {
+            display: flex;
+            width: 100%;
+            height: 36px;
+        }
+
+        .tb-bar-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .tb-bar-col:last-child {
+            border-right: none;
+        }
+
+        /* Anchos específicos según el JSON */
+        .tb-bar-col-a {
+            width: 346px;
+        }
+
+        .tb-bar-col-b {
+            width: 173px;
+        }
+
+        .tb-bar-col-c {
+            width: 347px;
+            flex-grow: 1;
+        }
+
+        .dt {
+            color: #090909; /* rgb(0.0336, 0.0336, 0.0336) */
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+        .tb-row-grid {
+            display: flex;
+            width: 1168px;
+            height: 36px;
+            background-color: #f5f5f5; /* equivalente a r:0.96 g:0.96 b:0.96 */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            border-left: 1px solid rgba(0, 0, 0, 0.2);
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        /* Columna izquierda */
+        .tb-col-e {
+            width: 300px;
+            height: 100%;
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* texto alineado a la derecha como en el JSON */
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        .col-title {
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #000;
+        }
+
+        /* Columna derecha */
+        .tb-col-f {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Grilla horizontal interna */
+        .tb-hi-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Cada celda de la grilla */
+        .hi-g-cell {
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+        .hi-g-cell:last-child {
+            border-right: none;
+        }
+        /*INCLINACION VOCACIONAL*/
+        
+        .tb-row-iv {
+        display: flex;
+        width: 1168px;
+        height: 135px;
+        background-color: #f5f5f5; /* r:0.961 */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        /* Columnas */
+        .tb-iv-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        padding: 10px;
+        }
+
+        .tb-iv-col:last-child {
+        border-right: none;
+        }
+
+        /* Texto principal */
+        .ea-name {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 8px;
+        }
+
+        /* Descripción */
+        .ea-desc {
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #5b5b5b; /* r:0.355 */
+        }
+
+
+        .tb-row-head-iv {
+        display: flex;
+        width: 1168px;
+        height: 36px;
+        background-color: #d5d5d5; /* rgb(0.8365, 0.8365, 0.8365) */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        /* Columnas iguales */
+        .tb-iv-col-b {
+        width: 389.33px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        .tb-iv-col-b:last-child {
+        border-right: none;
+        }
+
+        /* Texto centrado dentro de cada columna */
+        .tb-title-head {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        line-height: 21px;
+        text-align: center;
+        }
+
+        /* Cada columna */
+        .tb-iv-col {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px; /* itemSpacing */
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        .tb-iv-col:last-child {
+        border-right: none;
+        }
+
+        /* Texto dentro de cada opción */
+        .tb-opt-cont{
+            display: flex;
+            flex-direction: row;
+        }
+        .tb-opt {
+        width: 100px;
+        font-family: sans-serif;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        text-align: center;
+        width: auto;
+        white-space: ;
+        }
+        /*IV CHIPS INCLINACION VOCACIONAL*/
+        /* Contenedor principal */
+        .tb-row-iv-caps {
+        display: flex;
+        width: 1168px;
+        height: 72px;
+        background-color: #f5f5f5; /* rgb(0.961, 0.961, 0.961) */
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        /* Columnas */
+        .tb-col {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        }
+
+        .tb-col:last-child {
+        border-right: none;
+        }
+
+        /* Chips */
+        .iv-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: left;
+        height: 33px;
+        width: 235px;
+        padding: 4px 8px;
+        gap: 8px;
+        border-width: 3px;
+        border-style: solid;
+        border-radius: 8px;
+        background-color: transparent;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #000;
+        }
+
+        /* Variantes de color */
+        .iv-chip-green {
+        border-color: var(--chip-green);
+        }
+
+        .iv-chip-olive {
+        border-color: var(--chip-olive);
+        }
+
+        .iv-chip-gold {
+        border-color: var(--chip-gold);
+        }
+        .iv-chip-admin {
+            border-color: var(--chip-admin);
+        }
+
+        .iv-chip-ingenieria {
+            border-color: var(--chip-ingenieria);
+        }
+
+        .iv-chip-ti {
+            border-color: var(--chip-ti);
+        }
+        .iv-chip-sociales {
+            border-color: var(--chip-sociales);
+        }
+
+        .iv-chip-humanidades {
+            border-color: var(--chip-humanidades);
+        }
+
+        .iv-chip-lenguas {
+            border-color: var(--chip-lenguas);
+        }
+        .iv-chip-artes {
+        border-color: var(--chip-artes);
+        }
+
+        .iv-chip-creativos {
+        border-color: var(--chip-creativos);
+        }
+
+        .iv-chip-ambiente {
+        border-color: var(--chip-ambiente);
+        }
+        .iv-chip-inact{
+            border-color: var(--chip-text-color);
+            color: var(--chip-text-color);
+        }
+
+
 
         /* Estilos para impresión */
         @media print {
