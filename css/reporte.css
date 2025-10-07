@@ -29,9 +29,9 @@
             --color-dt-high-border: #090909;
             --color-footer-text: #202040;
              /* Variables de color para los bordes de los chips */
-            --chip-green: #4caf50;  /* rgb(0.298, 0.686, 0.314) */
-            --chip-olive: #808000;  /* rgb(0.502, 0.502, 0) */
-            --chip-gold:  #ffd700;  /* rgb(1, 0.843, 0) */
+            --chip-salud: #4caf50;  /* rgb(0.298, 0.686, 0.314) */
+            --chip-bio: #808000;  /* rgb(0.502, 0.502, 0) */
+            --chip-economia:  #ffd700;  /* rgb(1, 0.843, 0) */
             --chip-admin: #607d8b;       /* rgb(0.376, 0.490, 0.545) */
             --chip-ingenieria: #003366;  /* rgb(0, 0.2, 0.4) */
             --chip-ti: #00bfff;          /* rgb(0, 0.749, 1) */
@@ -511,7 +511,7 @@
             height: 36px;
             background-color: #f5f5f5; /* rgb(0.9615, 0.9615, 0.9615) */
             border: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+            
         }
 
         .tb-col-c {
@@ -531,7 +531,7 @@
             justify-content: center;
             height: 36px;
             border-right: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+            
         }
 
         .tb-bar-col:last-child {
@@ -566,7 +566,7 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             border-left: 1px solid rgba(0, 0, 0, 0.2);
             border-right: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+            
         }
 
         /* Columna izquierda */
@@ -578,7 +578,7 @@
             align-items: center;
             justify-content: flex-end; /* texto alineado a la derecha como en el JSON */
             border-right: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+            
         }
 
         .col-title {
@@ -593,7 +593,7 @@
             height: 100%;
             display: flex;
             align-items: center;
-            box-sizing: border-box;
+            
         }
 
         /* Grilla horizontal interna */
@@ -607,7 +607,7 @@
         /* Cada celda de la grilla */
         .hi-g-cell {
             border-right: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
+           
         }
         .hi-g-cell:last-child {
             border-right: none;
@@ -622,7 +622,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         border-left: 1px solid rgba(0, 0, 0, 0.2);
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         /* Columnas */
@@ -633,7 +633,7 @@
         justify-content: center;
         text-align: center;
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         padding: 10px;
         }
 
@@ -666,7 +666,7 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         border-left: 1px solid rgba(0, 0, 0, 0.2);
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         /* Columnas iguales */
@@ -677,7 +677,7 @@
         align-items: center;
         justify-content: center;
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         .tb-iv-col-b:last-child {
@@ -702,7 +702,7 @@
         justify-content: center;
         gap: 24px; /* itemSpacing */
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         .tb-iv-col:last-child {
@@ -732,7 +732,7 @@
         height: 72px;
         background-color: #f5f5f5; /* rgb(0.961, 0.961, 0.961) */
         border: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         /* Columnas */
@@ -742,7 +742,7 @@
         align-items: center;
         justify-content: center;
         border-right: 1px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
+        
         }
 
         .tb-col:last-child {
@@ -768,16 +768,16 @@
         }
 
         /* Variantes de color */
-        .iv-chip-green {
-        border-color: var(--chip-green);
+        .iv-chip-salud {
+        border-color: var(--chip-salud);
         }
 
-        .iv-chip-olive {
-        border-color: var(--chip-olive);
+        .iv-chip-bio {
+        border-color: var(--chip-bio);
         }
 
-        .iv-chip-gold {
-        border-color: var(--chip-gold);
+        .iv-chip-economia {
+        border-color: var(--chip-economia);
         }
         .iv-chip-admin {
             border-color: var(--chip-admin);
@@ -816,8 +816,111 @@
             border-color: var(--chip-text-color);
             color: var(--chip-text-color);
         }
+        /*MATRIZ ORIENTACION VOCACIONAL*/
+        .tb-row-mat-h {
+            display: grid;
+            grid-template-columns: repeat(8, 146px);
+            background: #d5d5d5;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            border-left: 1px solid rgba(0,0,0,0.2);
+            border-right: 1px solid rgba(0,0,0,0.2);
+            width: 1168px;
+            height: 72px;
+        }
+        .tb-col-mat-a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        
+        .tb-col-mat-a:last-child {
+            border-right: none;
+        }
+        .mat-tag {
+            color: #000;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 500;
+            text-align: center;
+            width: 110px;
+            display: block;
+            line-height: 1.2;
+        }
+        .tb-row-mat {
+            display: grid;
+            grid-template-columns: repeat(8, 146px);
+            width: 1168px;
+            height: 72px;
+            background: #f5f5f5;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            border-left: 1px solid rgba(0,0,0,0.2);
+            border-right: 1px solid rgba(0,0,0,0.2);
+            
+        }
 
+        .tb-col-mat-b {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 72px;
+            border-right: 1px solid rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            padding-left: 11px;
+            background: transparent;
+            background: #f5f5f5;
+        }
 
+        .mat-salud {
+            border-right: 5px solid var(--chip-salud);
+        }
+        .mat-bio {
+            border-right: 5px solid var(--chip-bio);
+        }
+        .mat-economia {
+            border-right: 5px solid var(--chip-economia);
+        }
+        .mat-admin {
+            border-right: 5px solid var(--chip-admin);
+        }
+        .mat-ingenieria {
+            border-right: 5px solid var(--chip-ingenieria);
+        }
+        .mat-ti {
+            border-right: 5px solid var(--chip-ti);
+        }
+        .mat-sociales {
+            border-right: 5px solid var(--chip-sociales);
+        }
+        .mat-humanidades {
+            border-right: 5px solid var(--chip-humanidades);
+        }
+        .mat-lenguas {
+            border-right: 5px solid var(--chip-lenguas);
+        }
+        .mat-artes {
+            border-right: 5px solid var(--chip-artes);
+        }
+        .mat-creativos {
+            border-right: 5px solid var(--chip-creativos);
+        }
+        .mat-ambiente {
+            border-right: 5px solid var(--chip-ambiente);
+        }
+        .tb-col-mat-b:last-child {
+            border-right: none;
+        }
+
+        
+        .tb-col-mat-b .mat-text {
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+            color: #000;
+            font-family: inherit;
+            
+        }
 
         /* Estilos para impresión */
         @media print {
