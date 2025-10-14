@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="main">
+        <!-- INICIA HEADER -->
         <div class="header print-header">
             <div class="hd-logo-inst">
                 <img src="img/hd-logo-inst.png" alt="Institución Logo">
@@ -37,13 +38,14 @@
                 
             </div>
         </div>
+        <!-- TERMINA HEADER -->
         <div class="section">
             <div class="report-header-des">
                 <h2 class="report-title">REPORTE DE ORIENTACIÓN VOCACIONAL</h2>
                 <p class="report-subtitle">Este informe de orientación vocacional está diseñado para ayudar a los estudiantes a explorar sus intereses y habilidades, y a tomar decisiones informadas sobre su futuro profesional. A través de diversas actividades y evaluaciones, los estudiantes podrán identificar sus fortalezas y áreas de mejora, así como conocer diferentes opciones de carrera que se alineen con sus aspiraciones. El objetivo es empoderar a los jóvenes para que elijan un camino que les apasione y les permita alcanzar sus metas.</p>
             </div>
             <!-- INICIA HABILIDAD INTELECTUALES -->
-            <div class="report-gp-container">
+            <div class="report-gp-container ">
                 <!--  INICIA COLUMNA  -->
                 <div class="rep-col">
                     <!-- INICIA INTELECTUALES VOCACIONAL -->
@@ -1182,7 +1184,7 @@
             </div>
             <!-- TERMINA HABILIDADES INTELECTUALES -->
             <!-- INICIA INCLINACIÓN VOCACIONAL -->
-            <div class="report-gp-container">
+            <div class="report-gp-container ">
                 <!--  INICIA COLUMNA  -->
                 <div class="rep-col">
                     <!-- INICIA INCLINACION -->
@@ -1466,10 +1468,10 @@
                 </div>
                 <!--  TERMINA COLUMNA  -->
             </div>
-            <div class="separador-print"></div>
+            
             <!-- TERMINA INCLINACIÓN VOCACIONAL -->
             <!-- INICIA MATRIZ DE CORRELACIÓN -->
-            <div class="report-gp-container rep-ov">
+            <div class="report-gp-container ">
                 <!--  INICIA COLUMNA  -->
                 <div class="rep-col">
                     <!-- INICIA MATRIZ -->
@@ -1481,7 +1483,7 @@
                                 <div class="report-h-top">
                                     <div class="r-h-info">
                                         <div class="r-h-title" id="repNombre">MATRIZ DE OPORTUNIDADES VOCACIONALES</div>
-                                        <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
+                                        <div class="r-h-date"  id=""></div>
                                     </div>
                                     <div class="r-h-logo">
                                         <img src="img/icon-soie.png" alt="">
@@ -1763,414 +1765,77 @@
                 </div>
                 <!--  TERMINA COLUMNA  -->
             </div>
+            
             <!-- TERMINA MATRIZ -->
+            <!-- INICIA AGENTE IA -->
+            <a id="agente-ia"></a>
+            <div class="report-gp-container  " >
+                <!--  INICIA COLUMNA  -->
+                <div class="rep-col">
+                    <!-- INICIA MATRIZ -->
+                    <div class="accordion ">
+                        <div class="accordion-item">
+                            <!-- INICIA REPORTE HEADER -->
+                            <button class="accordion-header" type="button">
+                                <i class="fa fa-chevron-down"></i>
+                                <div class="report-h-top">
+                                    <div class="r-h-info">
+                                        <div class="r-h-title" id="repNombre">CONSULTA CON AGENTE IA</div>
+                                        <div class="r-h-date"  id=""></div>
+                                    </div>
+                                    <div class="r-h-logo">
+                                        <img src="img/icon-ia.png" alt="">
+                                    </div>
+                                </div>
+                            </button>
+                            <!-- TERMINA REPORTE HEADER -->
+                            <!-- INICIA REPORTE CONTENT -->
+                            <div class="accordion-body open">
+                                <div class="ia-chat-container rep-ov">
+
+                                </div>
+                            </div>
+                            <!-- TERMINA REPORTE CONTENT -->
+                            <!-- FILA DE CIERRE -->
+                                <div class="tb-row-end">
+                                    
+                                </div>
+                            <!-- FILA DE CIERRE -->
+                        </div>
+                    </div>
+                    <!-- TERMINA MATRIZ -->
+                </div>
+                <!--  TERMINA COLUMNA  -->
+            </div>
+            <!-- TERMINA AGENTE IA -->
         </div>
+        <div class="separador-reporte"></div>
         <div class="footer">
             <span class="footer-text">Derechos Reservados - Lexium 2025 - www.lexium.mx</span>
         </div>
     </div>
-    <style>
-    /* Floating chat widget */
-    .chat-float {
-        position: fixed;
-        right: 200px; /* aligned to right border */
-        bottom:600px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        z-index: 10000;
-        pointer-events: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* label bubble */
-    .chat-label {
-        background-color: var(--lx-light-blue);
-        color: #fff;
-        padding: 8px 10px;
-        border-radius: 4px;
-        font-size: 14px;
-        font-weight: 600;
-        white-space: nowrap;
-        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
-        user-select: none;
-    }
-
-    /* round icon button */
-    .chat-button {
-        width: 85px;
-        height: 85px;
-        border-radius: 50%;
-        border: none;
-        background: #fff;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
-        cursor: pointer;
-        padding: 0;
-    }
-
-    /* image inside button */
-    .chat-button img {
-        width: 90px;
-        height: 90px;
-        display: block;
-    }
-
-    /* small screens: hide label to save space */
-    @media (max-width: 480px) {
-        .chat-label { display: none; }
-        .chat-float { right: 10px; bottom: 16px; }
-        .chat-button { width: 48px; height: 48px; }
-        .chat-button img { width: 22px; height: 22px; }
-    }
-
-    /* hide widget when printing */
-    @media print {
-        .chat-float { display: none !important; }
-    }
-    </style>
-
+    
+    <!-- INICIA BOTON FLOTANTE CHAT IA -->
     <div class="chat-float" id="chatFloat">
         <div class="chat-label" id="chatLabel">Consulta con IA</div>
-        <button class="chat-button" id="chatToggle" aria-expanded="false" aria-label="Abrir consulta con IA" type="button">
+        <button class="chat-button" id="chatToggle" aria-expanded="false" aria-label="Abrir consulta con IA" type="button"
+            onclick="document.getElementById('agente-ia').scrollIntoView({behavior:'smooth'});">
             <img src="img/icon-ia.png" alt="IA">
         </button>
     </div>
-
-    <script>
-    (function(){
-        const btn = document.getElementById('chatToggle');
-        const wrapper = document.getElementById('chatFloat');
-
-        if (!btn || !wrapper) return;
-
-        // simple toggle state (placeholder for real chat open)
-        btn.addEventListener('click', () => {
-            const open = wrapper.classList.toggle('open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-            // replace the following with your chat open logic
-            if (open) {
-                // example: focus the chat if you create one
-                console.log('Abrir chat con IA');
-            } else {
-                console.log('Cerrar chat con IA');
-            }
-        });
-    })();
-    </script>
-    <script>
-(function(){
-    const configs = [
-    {
-        btnId:'btnArt',
-        key:'artes',
-        title:'ARTES',
-        left:['ARQUITECTURA','ARTES','MÚSICA'],
-        right:['RESTAURACIÓN','RESTAURACIÓN DE BIENES MUEBLES']
-    },
-    {
-        btnId:'btnCrea',
-        key:'creativos',
-        title:'ESTUDIOS CREATIVOS',
-        left:['ARQUITECTURA','COMUNICACIÓN','COMUNICACIÓN GRÁFICA','MÚSICA'],
-        right:['PERIODISMO','RESTAURACIÓN','RESTAURACIÓN DE BIENES MUEBLES']
-    },
-    {
-        btnId:'btnAmb',
-        key:'ambiente',
-        title:'AMBIENTE CONSTRUIDO',
-        left:['ARQUITECTURA'],
-        right:['INGENIERÍA CIVIL']
-    },
-    {
-        btnId:'btnSalud',
-        key:'salud',
-        title:'CIENCIAS DE LA SALUD',
-        left:[
-            'ADMINISTRACIÓN DE LA SALUD','BIOMÉDICAS','BIOQUÍMICA','DEPORTES',
-            'ENFERMERÍA','FARMACOBIOLOGÍA','INGENIERÍA BIOMÉDICA'
-        ],
-        right:[
-            'INGENIERÍA FARMACÉUTICA','MEDICINA','NUTRICIÓN',
-            'ODONTOLOGÍA','QUÍMICA','SALUD','TERAPIA','VETERINARIA Y ZOOTECNIA'
-        ]
-    },
-    {
-        btnId:'btnBio',
-        key:'bio',
-        title:'CIENCIAS BIOLÓGICAS',
-        left:[
-            'AGRONOMÍA','BIOLOGÍA','BIOMÉDICAS','CIENCIAS FORESTALES','DESARROLLO AGROPECUARIO'
-        ],
-        right:[
-            'ECOLOGÍA','FARMACOBIOLOGÍA','QUÍMICA','VETERINARIA Y ZOOTECNIA'
-        ]
-    },
-    {
-        btnId:'btnEco',
-        key:'economia',
-        title:'ECONOMÍA',
-        left:['ECONOMÍA','FINANZAS','MERCADOTECNIA Y COMERCIO'],
-        right:['RELACIONES COMERCIALES','SEGUROS Y FIANZAS']
-    },
-    {
-        btnId:'btnAdmin',
-        key:'admin',
-        title:'ADMINISTRACIÓN',
-        left:[
-            'ADMINISTRACIÓN','CIENCIAS POLÍTICAS Y ADMINISTRACIÓN PÚBLICA',
-            'COMPUTACIÓN E INFORMÁTICA','CONTADURÍA'
-        ],
-        right:[
-            'FINANZAS','RELACIONES INDUSTRIALES','RELACIONES INTERNACIONALES','SEGUROS Y FIANZAS'
-        ]
-    },
-    {
-        btnId:'btnIng',
-        key:'ingenieria',
-        title:'INGENIERÍA',
-        left:[
-            'AERONÁUTICA','AGRONOMÍA','ASTRONOMÍA','BIOLOGÍA','BIOQUÍMICA','COMPUTACIÓN E INFORMÁTICA',
-            'DESARROLLO AGROPECUARIO','DISEÑO','ECOLOGÍA','ELÉCTRICA Y ELECTRÓNICA','FARMACOBIOLOGÍA',
-            'FINANZAS','FÍSICA','GEOGRAFÍA','GEOLOGÍA','GEOMÁTICA','GEOTÉCNIA'
-        ],
-        right:[
-            'HIDROLOGÍA','INFORMÁTICA ADMINISTRATIVA','INGENIERÍA AMBIENTAL','INGENIERÍA BIOMÉDICA',
-            'INGENIERÍA CIVIL','INGENIERÍA FARMACÉUTICA','INGENIERÍA INDUSTRIAL','INGENIERÍA QUÍMICA',
-            'MATEMÁTICAS - ACTUARIA','MECÁNICA','MINERO','NAVAL','NUTRICIÓN','OCEANOGRAFÍA','PESCA',
-            'QUÍMICA','SISTEMAS Y CALIDAD','VETERINARIA Y ZOOTECNIA'
-        ]
-    },
-    {
-        btnId:'btnTi',
-        key:'ti',
-        title:'TECNOLOGÍAS DE LA INFORMACIÓN',
-        left:['COMPUTACIÓN E INFORMÁTICA'],
-        right:['INFORMÁTICA ADMINISTRATIVA','SISTEMAS Y CALIDAD']
-    },
-    {
-        btnId:'btnSoc',
-        key:'sociales',
-        title:'CIENCIAS SOCIALES',
-        left:[
-            'ANTROPOLOGÍA','ANTROPOLOGÍA FÍSICA','ANTROPOLOGÍA SOCIAL','ARQUEOLOGÍA','ARTES',
-            'CIENCIAS POLÍTICAS Y ADMINISTRACIÓN PÚBLICA','CIENCIAS SOCIALES','COMUNICACIÓN',
-            'COMUNICACIÓN GRÁFICA','CONSERVACIÓN Y RESTAURACIÓN DE BIENES CULTURALES MUEBLES',
-            'DEMOGRAFÍA','DEPORTES','DERECHO','ECONOMÍA','EDUCACIÓN','ESTUDIOS DE POBLACIÓN',
-            'ETNOLOGÍA','FILOSOFÍA'
-        ],
-        right:[
-            'GEOGRAFÍA','HISTORIA','HUMANIDADES','LINGÜÍSTICA','MERCADOTECNIA Y COMERCIO',
-            'PERIODISMO','POLÍTICAS PÚBLICAS','PSICOLOGÍA','RELACIONES COMERCIALES',
-            'RELACIONES INDUSTRIALES','RELACIONES INTERNACIONALES','SOCIOLOGÍA','TURISMO'
-        ]
-    },
-    {
-        btnId:'btnHum',
-        key:'humanidades',
-        title:'HUMANIDADES',
-        left:['ANTROPOLOGÍA','COMUNICACIÓN GRÁFICA','EDUCACIÓN','FILOSOFÍA'],
-        right:['HISTORIA','HUMANIDADES','LINGÜÍSTICA']
-    },
-    {
-        btnId:'btnLen',
-        key:'lenguas',
-        title:'LENGUAS',
-        left:['LINGÜÍSTICA'],
-        right:['IDIOMAS']
-    }
-];
+    <!-- TERMINA BOTON FLOTANTE CHAT IA -->
 
 
-    // Crea los modales dinámicamente
-    configs.forEach(cfg => {
-        // Crear contenedor principal
-        const modal = document.createElement('div');
-        modal.className = 'mat-modal';
-        modal.id = 'modal-' + cfg.btnId;
-
-        const box = document.createElement('div');
-        box.className = 'mat-modal-box';
-
-        // Barra de título
-        const titleBar = document.createElement('div');
-        titleBar.className = 'mat-modal-title';
-        titleBar.style.background = `var(--chip-${cfg.key}, #6c757d)`;
-
-        const titleText = document.createElement('div');
-        titleText.textContent = cfg.title;
-
-        const closeBtn = document.createElement('button');
-        closeBtn.className = 'mat-modal-close';
-        closeBtn.setAttribute('aria-label','Cerrar');
-        closeBtn.innerHTML = '&times;';
-
-        titleBar.appendChild(titleText);
-        titleBar.appendChild(closeBtn);
-
-        // Contenido principal
-        const content = document.createElement('div');
-        content.className = 'mat-modal-content';
-
-        // Columna izquierda
-        const colLeft = document.createElement('div');
-        colLeft.className = 'mat-modal-column';
-        const ulLeft = document.createElement('ul');
-        (cfg.left || []).forEach(it => {
-            const li = document.createElement('li');
-            li.textContent = it;
-            ulLeft.appendChild(li);
-        });
-        colLeft.appendChild(ulLeft);
-
-        // Columna derecha
-        const colRight = document.createElement('div');
-        colRight.className = 'mat-modal-column';
-        const ulRight = document.createElement('ul');
-        (cfg.right || []).forEach(it => {
-            const li = document.createElement('li');
-            li.textContent = it;
-            ulRight.appendChild(li);
-        });
-        colRight.appendChild(ulRight);
-
-        content.appendChild(colLeft);
-        content.appendChild(colRight);
-
-        box.appendChild(titleBar);
-        box.appendChild(content);
-        modal.appendChild(box);
-        document.body.appendChild(modal);
-
-        // Abrir modal al hacer clic en el botón
-        const trigger = document.getElementById(cfg.btnId);
-        if (trigger) {
-            trigger.addEventListener('click', function(e){
-                e.preventDefault();
-                modal.classList.add('open');
-                closeBtn.focus();
-            });
-        }
-
-        // Cerrar modal
-        closeBtn.addEventListener('click', () => modal.classList.remove('open'));
-        modal.addEventListener('click', (ev) => {
-            if (ev.target === modal) modal.classList.remove('open');
-        });
-        document.addEventListener('keydown', (ev) => {
-            if (ev.key === 'Escape' && modal.classList.contains('open')) {
-                modal.classList.remove('open');
-            }
-        });
-    });
-})();
-</script>
 
 
-    <script src="js/acc.js"></script>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".hi-bar");
 
-  bars.forEach(bar => {
-    const value = parseInt(bar.getAttribute("data-value")) || 0;
-    const text = bar.querySelector(".hi-bar-text");
+    <script src="js/modal-carreras.js"></script>
+    <script src="js/acc2.js"></script>
+    <script src="js/bar-chart-anim.js"></script>
+    <script src="js/ov-intelectuales-tabla-header.js"></script>
+    
 
-    // Si el valor < 10, aplica clase para texto fuera
-    if (value < 10) bar.classList.add("low-value");
 
-    // Animar ancho
-    requestAnimationFrame(() => {
-      bar.style.width = value + "%";
-    });
-
-    // Animar número
-    let current = 0;
-    const duration = 1200; // ms
-    const startTime = performance.now();
-
-    function animateNum(time) {
-      const progress = Math.min((time - startTime) / duration, 1);
-      const num = Math.floor(progress * value);
-      text.textContent = num;
-
-      if (progress < 1) {
-        requestAnimationFrame(animateNum);
-      } else {
-        text.textContent = value; // asegurar número final exacto
-      }
-    }
-
-    requestAnimationFrame(animateNum);
-  });
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const accordionBody = document.querySelector(".accordion-body");
-  if (!accordionBody) return;
-
-  // Función principal
-  function updateTbRowHeads() {
-    const allRowHeads = Array.from(accordionBody.querySelectorAll(".tb-row-head"));
-    const openAccordions = Array.from(accordionBody.querySelectorAll(".accordion-child-body.open"));
-
-    console.log(`[accordion debug] tb-row-head: ${allRowHeads.length}, open accordions: ${openAccordions.length}`);
-
-    // Oculta todos los headers
-    allRowHeads.forEach(h => {
-      h.classList.remove("ct-visible-grid");
-      h.classList.add("ct-hidden");
-      h.style.display = ""; // limpiar posibles inline styles previos
-    });
-
-    // Muestra solo el primer tb-row-head dentro del primer accordion abierto
-    if (openAccordions.length > 0) {
-      const firstOpen = openAccordions[0];
-      const firstHead = firstOpen.querySelector(".tb-row-head");
-      if (firstHead) {
-        firstHead.classList.remove("ct-hidden");
-        firstHead.classList.add("ct-visible-grid");
-        firstHead.style.display = "grid";
-      }
-    }
-  }
-
-  // Ejecución inicial
-  updateTbRowHeads();
-
-  // Recalcular cuando se hace click en cualquier header
-  accordionBody.querySelectorAll(".accordion-child-header").forEach(btn => {
-    btn.addEventListener("click", () => {
-      setTimeout(updateTbRowHeads, 0);
-    });
-  });
-
-  // Observa cambios en clases o estructura del acordeón
-  const observer = new MutationObserver(mutations => {
-    const needsUpdate = mutations.some(m =>
-      m.type === "attributes" && m.attributeName === "class" ||
-      m.type === "childList"
-    );
-    if (needsUpdate) {
-      clearTimeout(window.__accordion_update_timeout);
-      window.__accordion_update_timeout = setTimeout(updateTbRowHeads, 20);
-    }
-  });
-
-  observer.observe(accordionBody, {
-    subtree: true,
-    childList: true,
-    attributes: true,
-    attributeFilter: ["class"]
-  });
-});
-</script>
 
 
 

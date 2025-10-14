@@ -186,6 +186,7 @@
             display: flex;
             flex-direction: row;
             gap: 10px;
+           
         }
         .rep-col {
             flex: 1;
@@ -1103,6 +1104,67 @@
         .separador-print{
             display: none;
         }
+        /*ESTILOS CHAT AGENTE IA*/
+        .ia-chat-container{
+            width: 100%;
+            height: 300px;
+        }
+        /* CHAT WIDGET STYLES */
+    .chat-float {
+        position: fixed;
+        right: calc(50vw - 42.5px - 670px); /* center + 100px, 42.5px is half button width */
+        bottom:50vh;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 10000;
+        pointer-events: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* label bubble */
+    .chat-label {
+        background-color: var(--lx-light-blue);
+        color: #fff;
+        padding: 8px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+        user-select: none;
+    }
+
+    /* round icon button */
+    .chat-button {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: none;
+        background: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+        cursor: pointer;
+        padding: 0;
+    }
+
+    /* image inside button */
+    .chat-button img {
+        width: 90px;
+        height: 90px;
+        display: block;
+    }
+
+    /* small screens: hide label to save space */
+    @media (max-width: 480px) {
+        .chat-label { display: none; }
+        .chat-float { right: 10px; bottom: 16px; }
+        .chat-button { width: 48px; height: 48px; }
+        .chat-button img { width: 22px; height: 22px; }
+    }
         /* Small responsive tweak */
         @media (max-width: 460px) {
             .mat-modal-box { width: 92%; height: 72%; }
@@ -1139,9 +1201,14 @@
                 padding: 0px 16px 8px 16px !important;
                 gap: 16px;
             }
-            .report-gp-container {
-            margin: 6px 0;
+            .section {
+                display: block !important;   /* o display: initial */
             }
+            .report-gp-container {
+                margin: 6px 0;
+                
+            }
+            
             .hd-logo-lexium .lexium-logo {
                 height: 20px;
             }
@@ -1227,6 +1294,9 @@
             }
             .rep-ov{
                 page-break-inside: avoid;
+            }
+            .rep-br-after{
+               page-break-after: always;
             }
 
             .hi-bar {
@@ -1344,5 +1414,13 @@
             overflow: hidden;
             padding-left: 5px;
         }
+        /*CHAT WIDGET OCULTO*/
+
+        .chat-float { display: none !important; }
+.report-gp-container {
+    page-break-inside: avoid; /* evita que se corte dentro del div */
+    break-inside: avoid;      /* equivalente moderno */
+  }
+       
     }
         
