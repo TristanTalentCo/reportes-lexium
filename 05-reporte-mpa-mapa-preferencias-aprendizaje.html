@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexium - Reporte Habilidades Intelectuales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/reporte.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- INICIA HEADER -->
+        <div class="header print-header">
+            <div class="hd-logo-inst">
+                <img src="img/hd-logo-inst.png" alt="Institución Logo">
+            </div>
+            <div class="hd-datos-alumno">
+                <div class="al-dt-colegio">Colegio: Nombre del colegio</div>
+                <div class="al-dt-nombre">Nombre: Nombre del alumno</div>
+                <div class="al-dt-grupo">
+                    <div class="dt-caps" id="edad">15 años de edad</div>
+                    <div class="dt-caps" id="nivel">1º PREPARATORIA</div>  
+                    <div class="dt-caps" id="grupo">GRUPO 1° A - 2024-2025</div>  
+                </div>
+                <div class="al-dt-fecha">Fecha de consulta: 19/08/2025</div>
+            </div>
+            <div class="hd-logo-lexium">
+                <div class="lexium-logo">
+                    <img src="img/lexium-logo 1.png" alt="Institución Logo">
+                </div>
+                <button onclick="window.print()">
+                    <i class="fa fa-print"></i>
+                    Imprimir
+                </button>
+                
+            </div>
+        </div>
+        <!-- TERMINA HEADER -->
+        <div class="section">
+
+            <!-- INICIA REPORTE MAPA PREFERENCIAS APRENDIZAJE -->
+            <div class="report-gp-container ">
+                <!--  INICIA COLUMNA  -->
+                <div class="rep-col">
+                    <div class="accordion ">
+                        <div class="accordion-item">
+                            <!-- INICIA REPORTE HEADER -->
+                            <button class="accordion-header" type="button">
+                                <i class="fa fa-chevron-down"></i>
+                                <div class="report-h-top">
+                                    <div class="r-h-info">
+                                        <div class="r-h-title" id="repNombre">MAPA DE PREFERENCIAS DE APRENDIZAJE</div>
+                                        <div class="r-h-date"  id="repFecha">20 Sept 2024</div>
+                                    </div>
+                                    <div class="r-h-logo">
+                                        <img src="img/icon-soie.png" alt="">
+                                    </div>
+                                </div>
+                            </button>
+                            <!-- TERMINA REPORTE HEADER -->
+                            <!-- INICIA REPORTE CONTENT -->
+                            <div class="accordion-body open">
+                                <!-- INICIA ANOTACIONES -->
+                                 <div class="r-desc" >
+                                    <div class="r-txt">
+                                        <p class="text-rep-desc">
+                                            Tabla de descripciones inteligencia emocional.
+                                        </p>
+                                    </div>
+                                    <div class="r-img" >
+                                        <img src="img/chart-disper.png" alt="">
+                                    </div>
+                                 </div>
+                                <!-- TERMINA ANOTACIONES -->
+                                <!-- INICIA BLOQUE -->
+                                <div class="accordion-child rep-ov">
+                                    <button class="accordion-child-header " type="button">
+                                        <div class="tb-col-a">
+                                            <i class="fa fa-chevron-down"></i>
+                                            <div class="">PREFERENCIAS PERCEPTUALES</div>                                            
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </button>
+                                    
+                                    <div class="accordion-child-body open">
+                                        <div class="tb-content" id="tcIa">
+                                            <div class="tb-row-head">
+                                                <div class="tb-col-c">
+                                                </div>
+                                                <div class="tb-col-d-433">
+                                                    <div class="tb-bar-col tb-bar-col-a">
+                                                        <span class="dt">PREFERENCIA BAJA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-b">
+                                                        <span class="dt">PREFERENCIA MEDIA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-c">
+                                                        <span class="dt">PREFERENCIA ALTA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">LENGUAJE VISUAL</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="20">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">NUMÉRICO VISUAL</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="65">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">LENGUAJE AUDITIVO</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="50">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">NUMÉRICO AUDITIVO</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="65">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">KINESTÉSICO</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="50">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TERMINA BLOQUE -->
+                                <!-- INICIA BLOQUE -->
+                                <div class="accordion-child rep-ov">
+                                    <button class="accordion-child-header " type="button">
+                                        <div class="tb-col-a">
+                                            <i class="fa fa-chevron-down"></i>
+                                            <div class="">PREFERENCIAS DE INTERACCIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </button>
+                                    
+                                    <div class="accordion-child-body open">
+                                        <div class="tb-content" id="tcIa">
+                                            <div class="tb-row-head">
+                                                <div class="tb-col-c">
+                                                </div>
+                                                <div class="tb-col-d-433">
+                                                    <div class="tb-bar-col tb-bar-col-a">
+                                                        <span class="dt">PREFERENCIA BAJA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-b">
+                                                        <span class="dt">PREFERENCIA MEDIA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-c">
+                                                        <span class="dt">PREFERENCIA ALTA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">INDIVIDUAL</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="100">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">EN EQUIPO</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="20">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TERMINA BLOQUE -->
+                                <!-- INICIA BLOQUE -->
+                                <div class="accordion-child rep-ov">
+                                    <button class="accordion-child-header " type="button">
+                                        <div class="tb-col-a">
+                                            <i class="fa fa-chevron-down"></i>
+                                            <div class="">PREFERENCIAS DE COMUNICACIÓN</div>
+                                        </div>
+                                        <div class="tb-col-b">
+                                            <div class="tb-data-container dat-title" id="datoTotal">DT</div>
+                                        </div>
+                                    </button>
+                                    
+                                    <div class="accordion-child-body open">
+                                        <div class="tb-content" id="tcIa">
+                                            <div class="tb-row-head">
+                                                <div class="tb-col-c">
+                                                </div>
+                                                <div class="tb-col-d-433">
+                                                    <div class="tb-bar-col tb-bar-col-a">
+                                                        <span class="dt">PREFERENCIA BAJA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-b">
+                                                        <span class="dt">PREFERENCIA MEDIA</span>
+                                                    </div>
+
+                                                    <div class="tb-bar-col tb-bar-col-c">
+                                                        <span class="dt">PREFERENCIA ALTA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">ORAL</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="20">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tb-row-grid">
+                                                <div class="tb-col-e">
+                                                    <span class="col-title">ESCRITO</span>
+                                                </div>
+
+                                                <div class="tb-col-f">
+                                                    <div class="tb-hi-grid">
+                                                        <!-- 10 celdas de referencia -->
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+                                                        <div class="hi-g-cell"></div>
+
+                                                        <!-- Barra dinámica -->
+                                                        <div class="hi-bar" data-value="50">
+                                                            <span class="hi-bar-text">0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TERMINA BLOQUE -->
+                            </div>
+                            <!-- TERMINA REPORTE CONTENT -->
+                            <!-- FILA DE CIERRE -->
+                                <div class="tb-row-end">
+                                    
+                                </div>
+                            <!-- FILA DE CIERRE -->
+                        </div>
+                    </div>
+                </div>
+                <!--  TERMINA COLUMNA  -->
+            </div>
+            <!-- TERMINA HABILIDADES INTELECTUALES -->
+
+        </div>
+        <div class="separador-reporte"></div>
+        <div class="footer">
+            <span class="footer-text">Derechos Reservados - Lexium 2025 - www.lexium.mx</span>
+        </div>
+    </div>
+    
+    <!-- INICIA BOTON FLOTANTE CHAT IA -->
+    <div class="chat-float" id="chatFloat">
+        <div class="chat-label" id="chatLabel">Consulta con IA</div>
+        <button class="chat-button" id="chatToggle" aria-expanded="false" aria-label="Abrir consulta con IA" type="button"
+            onclick="document.getElementById('agente-ia').scrollIntoView({behavior:'smooth'});">
+            <img src="img/icon-ia.png" alt="IA">
+        </button>
+    </div>
+    <!-- TERMINA BOTON FLOTANTE CHAT IA -->
+
+
+
+
+
+    <script src="js/modal-carreras.js"></script>
+    <script src="js/acc2.js"></script>
+    <script src="js/bar-chart-anim.js"></script>
+    <script src="js/ov-intelectuales-tabla-header.js"></script>
+    
+
+
+
+
+
+
+</body>
+</html>
